@@ -1,0 +1,8 @@
+services:
+  tailwindcss:
+    build: .
+    volumes:
+      - ${APP_DIR}:/source_app
+    command: npx tailwindcss -i ./input.css -o /source_app/${OUTPUT} --watch
+    stdin_open: true
+    tty: true
